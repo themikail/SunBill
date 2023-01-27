@@ -294,7 +294,7 @@ const SetupProfile = () => {
 
                 <div className="flex flex-col w-1/2">
                   <label htmlFor="accountVatid" className="text-sm">
-                    USt-IdNr.
+                    USt-IdNr.:
                   </label>
                   <input
                     type="text"
