@@ -27,6 +27,7 @@ const SetupProfile = () => {
   const [accountEmail, setAccountEmail] = useState("");
   const [accountPhone, setAccountPhone] = useState("");
   const [accountNumber, setAccountNumber] = useState("");
+  const [accountWebsite, setAccountWebsite] = useState("");
   const [accountVat, setAccountVat] = useState("");
   const [accountVatid, setAccountVatId] = useState("");
   const [bankName, setBankName] = useState("");
@@ -92,6 +93,7 @@ const SetupProfile = () => {
       accountPhone,
       accountVat,
       accountVatid,
+      accountWebsite,
     });
     const imageRef = ref(storage, `businesses/${docRef.id}/image`);
     if (
@@ -275,6 +277,21 @@ const SetupProfile = () => {
                     onChange={(e) => setAccountPhone(e.target.value)}
                   />
                 </div>
+              </div>
+
+              <div className="flex flex-col w-1/2">
+                <label htmlFor="accountWebsite" className="text-sm">
+                  Webseite
+                </label>
+                <input
+                  type="text"
+                  required
+                  className="py-2 px-4 bg-gray-100 w-full mb-6 capitalize rounded"
+                  name="accountWebsite"
+                  value={accountWebsite}
+                  onChange={(e) => setAccountWebsite(e.target.value)}
+                  style={{ textTransform: "lowercase" }}
+                />
               </div>
 
               <div className="flex items-end space-x-4">

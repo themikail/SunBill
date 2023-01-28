@@ -302,16 +302,17 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
                 {businessDetails[0].data.businessCity} &nbsp;&nbsp;&nbsp;&nbsp;
                 <strong>E-Mail</strong> {businessDetails[0].data.accountEmail}{" "}
                 &nbsp;&nbsp;&nbsp;&nbsp;<strong>Website</strong>{" "}
-                {businessDetails[0].data.businessWebsite}
+                {businessDetails[0].data.accountWebsite}
               </p>
             )}
             {businessDetails && (
               <p className="text-sm text-center">
                 <strong>Bank</strong> {businessDetails[0].data.bankName}{" "}
-                &nbsp;&nbsp;&nbsp;&nbsp;<strong>SWIFT/BIC</strong>{" "}
-                {businessDetails[0].data.bankSwift} &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong>IBAN</strong> {businessDetails[0].data.bankIban}{" "}
-                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Kontoinhaber</strong>{" "}
+                &nbsp;&nbsp;&nbsp;&nbsp;<strong>IBAN</strong>{" "}
+                {businessDetails[0].data.bankIban} &nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>SWIFT/BIC</strong> {businessDetails[0].data.bankSwift}{" "}
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Kontoinhaber</strong>{" "}
                 {businessDetails[0].data.businessName}
               </p>
             )}
