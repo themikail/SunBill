@@ -6,11 +6,10 @@ const Footer = () => {
       <p className="text-sm">
         Made with 💖 from{' '}
         <a
-          href="https://twitter.com/Arshadayvid"
+          href=""
           rel="noopener noreferrer"
           target="_blank"
         >
-          David Asaolu
         </a>
       </p>
     </footer>

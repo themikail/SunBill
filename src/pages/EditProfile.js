@@ -17,7 +17,7 @@ import Nav from "../components/Nav";
 import Loading from "../components/Loading";
 import { showToast } from "../utils/functions";
 
-const SetupProfile = () => {
+const EditProfile = () => {
   const user = useSelector((state) => state.user.user);
   const [businessName, setBusinessName] = useState("");
   const [businessAddress, setBusinessAddress] = useState("");
@@ -55,7 +55,7 @@ const SetupProfile = () => {
         });
         setLoading(false);
         if (business.length > 0) {
-          navigate("/dashboard");
+          // navigate("/dashboard");
         }
       });
       return () => unsubscribe();
@@ -157,7 +157,6 @@ const SetupProfile = () => {
                 name="businessName"
                 value={businessName}
                 onChange={(e) => setBusinessName(e.target.value)}
-
               />
 
               <div className="flex items-end space-x-4">
@@ -378,4 +377,4 @@ const SetupProfile = () => {
   );
 };
 
-export default SetupProfile;
+export default EditProfile;

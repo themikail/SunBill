@@ -54,9 +54,21 @@ const Nav = (props) => {
     >
       <List>
         {loggedIn ? (
-          <ListItem button onClick={() => signOut()}>
-            <ListItemText primary="Sign Out" />
-          </ListItem>
+          <div>
+            <ListItem button onClick={() => signOut()}>
+              <ListItemText primary="Sign Out" />
+            </ListItem>
+            <Link to="/">
+              <ListItem button>
+                <ListItemText primary="Kunden" />
+              </ListItem>
+            </Link>
+            <Link to="/">
+              <ListItem button>
+                <ListItemText primary="Produkte" />
+              </ListItem>
+            </Link>
+          </div>
         ) : (
           <Link to="/login">
             <ListItem button>

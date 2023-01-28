@@ -64,7 +64,7 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
               <img
                 src={businessDetails ? businessDetails[0].data.logo : ""}
                 alt="Logo"
-                className="w-[80px]"
+                className="w-[100px]"
               />
             </div>
             <div className="w-1/2  px-40 py-4">
@@ -154,7 +154,7 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
                   <strong>{businessDetails[0].data.businessName}</strong>
                 </p>
                 <p className="text-sm mb-1">
-                  {businessDetails[0].data.businessAddress},
+                  {businessDetails[0].data.businessAddress}
                 </p>
                 <p className="text-sm mb-1">
                   {businessDetails[0].data.businessCity}
@@ -174,10 +174,10 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
 
             <table>
               <thead>
-                <th>Beschreibung</th>
-                <th className="text-right text-sm">Einzelpreis</th>
-                <th className="text-right text-sm">Menge</th>
-                <th className="text-right text-sm">Betrag</th>
+                <th className="text-xs">Beschreibung</th>
+                <th className="text-right text-xs">Einzelpreis</th>
+                <th className="text-right text-xs">Menge</th>
+                <th className="text-right text-xs">Betrag</th>
               </thead>
               <tbody>
                 {invoiceDetails &&
@@ -205,10 +205,10 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
                 {invoiceDetails &&
                   invoiceDetails.data.itemList.map((item) => (
                     <tr key={item.itemName}>
-                      <td colSpan="3" className="text-right font-bold text-sm">
+                      <td colSpan="3" className="text-right font-bold text-xs">
                         Nettobetrag
                       </td>
-                      <td className="font-bold text-right uppercase text-sm">
+                      <td className="font-bold text-right uppercase text-xs">
                         {(Number(item.itemQuantity) * Number(item.itemCost))
                           .toFixed(2)
                           .toLocaleString("de-DE")}
@@ -219,10 +219,10 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
                 {invoiceDetails &&
                   invoiceDetails.data.itemList.map((item) => (
                     <tr key={item.itemName}>
-                      <td colSpan="3" className="text-right font-bold text-sm">
+                      <td colSpan="3" className="text-right font-bold text-xs">
                         Zzgl. 19% USt.
                       </td>
-                      <td className="font-bold text-right uppercase text-sm">
+                      <td className="font-bold text-right uppercase text-xs">
                         {(
                           Number(item.itemQuantity) *
                           Number(item.itemCost) *
@@ -238,10 +238,10 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
                 {invoiceDetails &&
                   invoiceDetails.data.itemList.map((item) => (
                     <tr key={item.itemName}>
-                      <td colSpan="3" className="text-right font-bold text-sm">
+                      <td colSpan="3" className="text-right font-bold text-xs">
                         Rechnungsbetrag
                       </td>
-                      <td className="font-bold text-right uppercase text-sm">
+                      <td className="font-bold text-right uppercase text-xs">
                         {(
                           Number(item.itemQuantity) *
                           Number(item.itemCost) *
@@ -270,15 +270,15 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
           {/* {businessDetails && (
             <div className="w-full p-8">
               <h3 className="font-semibold mb-2">Payment Details</h3>
-              <p className="text-sm mb-1 capitalize">
+              <p className="text-xs mb-1 capitalize">
                 <span className="font-semibold">Account Name: </span>
                 {businessDetails[0].data.accountName}
               </p>
-              <p className="text-sm mb-1">
+              <p className="text-xs mb-1">
                 <span className="font-semibold">Account Number: </span>
                 {businessDetails[0].data.accountNumber}
               </p>
-              <p className="text-sm mb-1 capitalize">
+              <p className="text-xs mb-1 capitalize">
                 <span className="font-semibold">Bank Name: </span>{' '}
                 {businessDetails[0].data.bankName}
               </p>
@@ -295,7 +295,7 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
             <hr></hr>
             <br></br>
             {businessDetails && (
-              <p className="text-sm text-center">
+              <p className="text-xs text-center">
                 <strong>Adresse</strong>{" "}
                 {businessDetails[0].data.businessAddress} •{" "}
                 {businessDetails[0].data.businessCode} •{" "}
@@ -306,7 +306,7 @@ export const ComponentToPrint = React.forwardRef((props, ref) => {
               </p>
             )}
             {businessDetails && (
-              <p className="text-sm text-center">
+              <p className="text-xs text-center">
                 <strong>Bank</strong> {businessDetails[0].data.bankName}{" "}
                 &nbsp;&nbsp;&nbsp;&nbsp;<strong>IBAN</strong>{" "}
                 {businessDetails[0].data.bankIban} &nbsp;&nbsp;&nbsp;&nbsp;
